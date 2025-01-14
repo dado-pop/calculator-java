@@ -10,5 +10,5 @@ U nastavku su zapažanja:
 - File Calculator.java – 1 : Premesti ovaj fajl u imenovani paket.
 - File Calculator.java – 4 : Dodaj privatni konstruktor da sakriješ implicitni javni.
 - File Calculator.java – 18 : Preimenuj metodu "ToString" da izbegneš nesporazum/sukob sa metodom "toString" definisanom u nadklasi "java.lang.Object".
-- File Calculator.java – 70 : Odmah vrati ovu izraz umesto da ga dodeljuješ privremenoj promenljivoj "textResult".
+- File Calculator.java – 70 : Odmah vrati ovaj izraz umesto da ga dodeljuješ privremenoj promenljivoj "textResult".
 - File Calculator.java – 183 : Ukloni ovaj suvišni skok.
