@@ -1,1 +1,46 @@
+// U inteilJ IDEA okruženju testirao sam program CALCULATOR pomoću ovog jediničnog testa:
 
+package it.akademija;
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class CalculatorTest {
+
+    @Test
+    public void testAddition() {
+        assertEquals("9.0", Calculator.Run("4+5"));
+    }
+
+    @Test
+    public void testOperatorPriority() {
+        assertEquals("14.0", Calculator.Run("2+3*4"));
+    }
+
+    @Test
+    public void testDivisionByZero() {
+        assertEquals("Infinity", Calculator.Run("10/0"));
+    }
+
+    @Test
+    public void testInvalidInput() {
+        assertEquals("ERROR", Calculator.Run("a+b"));
+    }
+
+    @Test
+    public void testEmptyInput() {
+        assertEquals("ERROR", Calculator.Run(""));
+    }
+}
+
+
+// Prva četiri testa su prošla, a greška se javila na zadnjem.
+-NAZIV GREŠKE:
+StringIndexOutOfBoundsException u metodi evaluateExpression.
+
+-OPIS:
+Metoda evaluateExpression ne provjerava da li je unos prazan prije nego što pristupi karakterima stringa.
+Ovo dovodi do izuzetka kada je unos prazan ("").
+
+-RIJEŠENJE:
+Dodati provjeru za prazan unos na početku metode evaluateExpression.
